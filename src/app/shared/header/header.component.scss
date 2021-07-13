@@ -1,0 +1,36 @@
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    backdrop-filter: saturate(180%) blur(20px);
+
+    a {
+        color: #999;
+        transition: ease-in-out color .15s;
+        text-decoration: none;
+        background-color: transparent;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    button {
+        color: #999;
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.router-link-active {
+    color: #fff !important;
+}
