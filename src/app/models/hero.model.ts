@@ -2,9 +2,12 @@ export interface HERO {
     id: string;
     name: string;
     pinyin: string;
+    country: string;
     desc: string;
     level: number;
     engergy: number;
+    type: HERO_TYPE[];
+    quality: HERO_QUALITY;
     attribute: ATTRIBUTE;
     growth: ATTRIBUTE;
     points: POINT;
@@ -34,4 +37,23 @@ export interface SKIN {
     hero_id: string;
     images: string;
     is_default: boolean;
+}
+
+export enum HERO_QUALITY {
+    B,
+    A,
+    S,
+    SP,
+    XP
+}
+
+export enum HERO_TYPE {
+    '武',
+    '智',
+    '兼',
+    '迅',
+    '辅',
+    '医',
+    '盾',
+    '控'
 }

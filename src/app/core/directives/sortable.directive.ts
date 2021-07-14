@@ -1,14 +1,7 @@
 import { Directive, EventEmitter, Input, Output } from '@angular/core';
-import { ATTRIBUTE } from 'src/app/models/hero.model';
+import { SortDirection, SortColumn, SortEvent } from 'src/app/models/table.model';
 
-export type SortColumn = keyof ATTRIBUTE | '';
-export type SortDirection = 'asc' | 'desc' | '';
 const rotate: { [key: string]: SortDirection } = { 'asc': 'desc', 'desc': '', '': 'asc' };
-
-export interface SortEvent {
-  column: SortColumn;
-  direction: SortDirection;
-}
 
 @Directive({
   selector: 'th[sortable]',
