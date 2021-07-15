@@ -1,1 +1,72 @@
-<p>login works!</p>
+<div class="login" *ngIf="formType === 'login'">
+    <div class="login-form justify-content-center align-items-center">
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="login()">
+            <h3 class="text-center text-info">{{ 'login.login' | translate }}</h3>
+            <div class="form-group">
+                <label for="username" class="text-info" [ngClass]="{ 'error': submitted && loginForm.controls.username.errors }">{{ 'login.username' | translate }}</label>
+                <input type="text" class="form-control" formControlName="username" [ngClass]="{ 'error': submitted && loginForm.controls.username.errors }">
+                <div class="text-danger" *ngIf="submitted && loginForm.controls.username.errors?.required">
+                    <sup>*</sup>{{ 'login.errors.required.username' | translate }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="text-info" [ngClass]="{ 'error': submitted && loginForm.controls.password.errors }">{{ 'login.password' | translate }}</label>
+                <input type="password" class="form-control" formControlName="password" [ngClass]="{ 'error': submitted && loginForm.controls.password.errors }">
+                <div class="text-danger" *ngIf="submitted && loginForm.controls.password.errors?.required">
+                    <sup>*</sup>{{ 'login.errors.required.password' | translate }}
+                </div>
+            </div>
+            <div class="d-flex">
+                <button type="submit" class="btn btn-info" (click)="login()">{{ 'login.submit' | translate }}</button>
+                <button type="button" class="btn btn-link ml-auto" (click)="switchForm()">{{ 'login.register' | translate }}</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="register" *ngIf="formType === 'register'">
+    <div class="register-form justify-content-center align-items-center">
+        <form class="form" [formGroup]="registerForm" (ngSubmit)="register()">
+            <h3 class="text-center text-info">{{ 'login.register' | translate }}</h3>
+            <div class="form-group">
+                <label for="username" class="text-info" [ngClass]="{ 'error': submitted && registerForm.controls.username.errors }">{{ 'login.username' | translate }}</label>
+                <input type="text" class="form-control" formControlName="username" [ngClass]="{ 'error': submitted && registerForm.controls.username.errors }">
+                <div class="text-danger" *ngIf="submitted && registerForm.controls.username.errors?.required">
+                    <sup>*</sup>{{ 'login.errors.required.username' | translate }}
+                </div>
+                <div class="text-danger" *ngIf="submitted && registerForm.controls.username.errors?.minlength">
+                    <sup>*</sup>{{ 'login.errors.length.username' | translate }}
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="group-gap">
+                    <div class="mb-3">
+                        <label for="password" class="text-info" [ngClass]="{ 'error': submitted && registerForm.controls.password.errors }">{{ 'login.password' | translate }}</label>
+                        <input type="password" class="form-control" formControlName="password" [ngClass]="{ 'error': submitted && registerForm.controls.password.errors }">
+                        <div class="text-danger" *ngIf="submitted && registerForm.controls.password.errors?.required">
+                            <sup>*</sup>{{ 'login.errors.required.password' | translate }}
+                        </div>
+                        <div class="text-danger" *ngIf="submitted && registerForm.controls.password.errors?.minlength">
+                            <sup>*</sup>{{ 'login.errors.length.password' | translate }}
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="text-info" [ngClass]="{ 'error': submitted && registerForm.controls.confirmPassword.errors }">{{ 'login.confirmPassword' | translate }}</label>
+                        <input type="password" class="form-control" formControlName="confirmPassword" [ngClass]="{ 'error': submitted && registerForm.controls.confirmPassword.errors }">
+                        <div class="text-danger" *ngIf="submitted && registerForm.controls.confirmPassword.errors?.required">
+                            <sup>*</sup>{{ 'login.errors.required.confirmPassword' | translate }}
+                        </div>
+                        <div class="text-danger" *ngIf="submitted && registerForm.controls.confirmPassword.errors?.MatchPassword">
+                            <sup>*</sup>{{ 'login.errors.confirmPassword' | translate }}
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="d-flex">
+                <button type="submit" class="btn btn-info" (click)="register()">{{ 'login.logon' | translate }}</button>
+                <button type="button" class="btn btn-link ml-auto" (click)="switchForm()">{{ 'login.login' | translate }}</button>
+            </div>
+        </form>
+    </div>
+</div>

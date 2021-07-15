@@ -1,9 +1,10 @@
 export interface HERO {
     id: string;
     name: string;
-    pinyin: string;
+    name_en: string;
     country: string;
     desc: string;
+    desc_en: string;
     level: number;
     engergy: number;
     type: HERO_TYPE[];

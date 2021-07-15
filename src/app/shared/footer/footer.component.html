@@ -5,18 +5,18 @@
         <small class="d-block mb-3 text-muted">© 11952927 CANADA INC. <br> 2019-{{ current }}</small>
       </div>
       <div class="col-6 col-md">
-        <h5>Features</h5>
+        <h5>{{ 'footer.features' | translate }}</h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" [routerLink]="['/heros']">Heros</a></li>
-          <li><a class="text-muted" [routerLink]="['/skills']">Skills</a></li>          
+          <li><a class="text-muted" [routerLink]="['/heros']">{{ 'footer.heros' | translate }}</a></li>
+          <li><a class="text-muted" [routerLink]="['/skills']">{{ 'footer.skills' | translate }}</a></li>          
         </ul>
       </div>            
       <div class="col-6 col-md">
-        <h5>About</h5>
+        <h5>{{ 'footer.about' | translate }}</h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">About</a></li>          
-          <li><a class="text-muted" href="#">Privacy</a></li>
-          <li><a class="text-muted" href="#">Terms</a></li>
+          <li><a class="text-muted" href="#">{{ 'footer.contact' | translate }}</a></li>          
+          <li><a class="text-muted" href="#">{{ 'footer.privacy' | translate }}</a></li>
+          <li><a class="text-muted" href="#">{{ 'footer.terms' | translate }}</a></li>
         </ul>
       </div>
     </div>

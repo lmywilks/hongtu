@@ -9,7 +9,6 @@ import { SortColumn, SortDirection, TABLE_STATE } from 'src/app/models/table.mod
 import { tap, debounceTime, switchMap, delay } from 'rxjs/operators';
 import { SearchHeroResult } from 'src/app/models/search-result.model';
 import { sort, matches } from '../utils/helper';
-import { DecimalPipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -26,14 +25,14 @@ export class HeroService {
   private _total_heros: HERO[] = [];
 
   private _state: TABLE_STATE = {
-      page: 1,
-      pageSize: 10,
-      searchTerm: '',
-      sortColumn: '',
-      sortDirection: ''
+    page: 1,
+    pageSize: 10,
+    searchTerm: '',
+    sortColumn: '',
+    sortDirection: ''
   };
 
-  constructor(private http: HttpClient, private pipe: DecimalPipe) { 
+  constructor(private http: HttpClient) { 
     this._search$.pipe(
         switchMap(() => this.List())
     ).pipe(
@@ -92,7 +91,7 @@ export class HeroService {
     let heros = sort('hero', this._total_heros, sortColumn, sortDirection);
 
     // 2. filter
-    heros = heros.filter(hero => matches('hero', hero, searchTerm, this.pipe));
+    heros = heros.filter(hero => matches('hero', hero, searchTerm));
     const total = heros.length;
 
     // 3. paginate

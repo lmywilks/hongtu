@@ -4,7 +4,7 @@ import { SkillComponent } from './skill.component';
 
 const routes: Routes = [
   {
-    path: 'skills',
+    path: '',
     component: SkillComponent
   }
 ];

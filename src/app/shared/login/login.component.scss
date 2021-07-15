@@ -1,0 +1,15 @@
+.login, .register {
+    padding: 50px;
+
+    label.error {
+        color: #dc3545 !important;
+    }
+
+    input.error {
+        border-color: #dc3545 !important;
+    }
+
+    .text-danger {
+        font-size: 80% !important;
+    }
+}

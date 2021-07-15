@@ -1,6 +1,5 @@
-import { DecimalPipe } from '@angular/common';
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { SortableDirective } from '../core/directives/sortable.directive';
 import { HeroService } from '../core/services/hero.service';
 import { HERO } from '../models/hero.model';
@@ -10,9 +9,9 @@ import { SortEvent } from '../models/table.model';
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss'],
-  providers: [HeroService, DecimalPipe]
+  providers: [HeroService]
 })
-export class HeroComponent implements OnInit {
+export class HeroComponent {
 
   heros$: Observable<HERO[]>;
   total$: Observable<number>;
@@ -22,9 +21,6 @@ export class HeroComponent implements OnInit {
   constructor(public heroService: HeroService) {
     this.heros$ = this.heroService.heros$;
     this.total$ = this.heroService.total$;
-  }
-
-  ngOnInit(): void {
   }
 
   onSort(event: any) {

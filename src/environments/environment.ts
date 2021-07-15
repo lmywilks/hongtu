@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  API_ROOT: ''
+  API_ROOT: '',
+  defaultLanguage: 'cn-CN',
+  supportLanguage: ['cn-CN', 'en-US']
 };
 
 /*

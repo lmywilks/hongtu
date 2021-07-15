@@ -1,1 +1,40 @@
-<p>skill works!</p>
+<form>
+    <div class="form-group form-inline">
+        Search: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="skillService.searchTerm"/>
+        <span class="ml-3" *ngIf="skillService.loading$ | async">Loading...</span>
+    </div>
+
+    <div class="skill-content mb-3">
+        <div class="row col-12">
+            <div class="col-lg-3 col-sm-6 mb-3" *ngFor="let skill of skills$ | async">
+                <div class="card">
+                    <img [src]="skill.image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ skill.name }}</h5>
+                        <p class="card-text">{{ skill.desc}}</p>
+                        <small class="d-flex">
+                            <span>品质：{{ skill.quality | translate }}</span>
+                            <span class="ml-auto">效果：<span *ngFor="let e of skill.effecient; let last=last">{{ e | translate }}{{ last ? '' : '|' }}</span></span>
+                        </small>
+                        <br>
+                        <small>适用：<span *ngFor="let a of skill.adjustment; let last=last">{{ a | translate }}{{ last ? '' : '、' }}</span></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="d-flex justify-content-between p-2">
+      <ngb-pagination
+        [collectionSize]="(total$ | async)!" [(page)]="skillService.page" [pageSize]="skillService.pageSize">
+      </ngb-pagination>
+  
+      <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="skillService.pageSize">
+        <option [ngValue]="4">4 skills per page</option>
+        <option [ngValue]="8">8 skills per page</option>
+        <option [ngValue]="12">12 skills per page</option>
+      </select>
+    </div>
+  
+  </form>
+  

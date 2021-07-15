@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { SkillService } from '../core/services/skill.service';
+import { SKILL, SKILL_EFFECIENT, SKILL_QUALITY } from '../models/skill.model';
 
 @Component({
   selector: 'app-skill',
   templateUrl: './skill.component.html',
   styleUrls: ['./skill.component.scss']
 })
-export class SkillComponent implements OnInit {
+export class SkillComponent {
 
-  constructor() { }
+  skills$: Observable<SKILL[]>;
+  total$: Observable<number>;  
 
-  ngOnInit(): void {
+  constructor(public skillService: SkillService) {
+    this.skills$ = this.skillService.skills$;
+    this.total$ = this.skillService.total$;
   }
 
 }

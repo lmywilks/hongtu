@@ -1,0 +1,74 @@
+{
+    "header": {
+        "heros": "武将",
+        "skills": "技能",
+        "login": "登录"
+    },
+    "footer": {
+        "features": "简介",
+        "heros": "武将",
+        "skills": "技能",
+        "about": "关于",
+        "contact": "联系方式",
+        "privacy": "隐私",
+        "terms": "法律条款"
+    },
+    "login": {
+        "username": "用户名",
+        "password": "密码",
+        "confirmPassword": "确认密码",
+        "submit": "登录",
+        "register": "注册新账号",
+        "login": "登录已有账号",
+        "logon": "提交",
+        "errors": {
+            "required": {
+                "username": "请输入用户名",
+                "password": "请输入密码",
+                "confirmPassword": "请再次确认密码"
+            },
+            "length": {
+                "username": "用户名长度至少6位",
+                "password": "密码长度至少6位"                
+            },
+            "confirmPassword": "两次输入密码不一致"
+        }
+    },
+    "skill": {
+        "effecient": {
+            "INTELLIGENCE_SINGLE": "智力单体",
+            "INTELLIGENCE_MULTIPLE": "智力群体",
+            "FORCE_SINGLE": "武力单体",
+            "FORCE_MULTIPLE": "武力群体",
+            "BUFF": "增益",
+            "DEBUFF": "减益",
+            "PROTECTION": "援护",
+            "HEAL": "治疗",
+            "CONTROL": "控制",
+            "HOME": "内政"
+        },
+        "status": {
+            "UNKNOWN": "自带",
+            "UNOWNED": "未拥有",
+            "OWNED": "已拥有",
+            "RESEARCHABLE": "可研究",
+            "EXCHANGABLE": "可兑换"
+        },
+        "category": {
+            "COMMAND": "指挥",
+            "PASSIVE": "被动",
+            "ACTIVE": "主动",
+            "COMBO": "连击",
+            "HOME": "内政",
+            "ARRAY": "阵法",
+            "WAR": "兵法"
+        },
+        "adjustment": {
+            "INFANTRY": "步兵",
+            "ARCHER": "弓兵",
+            "PIKEMAN": "枪兵",
+            "CAVALRY": "骑兵"
+        }
+    }
+    
+}

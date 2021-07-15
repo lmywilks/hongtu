@@ -1,0 +1,74 @@
+{
+    "header": {
+        "heros": "Heros",
+        "skills": "Skills",
+        "login": "Sign In"
+    },
+    "footer": {
+        "features": "Features",
+        "heros": "Heros",
+        "skills": "Skills",
+        "about": "About",
+        "contact": "Contact Us",
+        "privacy": "Privacy",
+        "terms": "Terms"
+    },
+    "login": {
+        "username": "Username",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "submit": "Login",
+        "register": "Register",
+        "login": "Sign In",
+        "logon": "Sign On",
+        "errors": {
+            "required": {
+                "username": "Please enter Username.",
+                "password": "Please enter Password.",
+                "confirmPassword": "Please confirm your Password."
+            },
+            "length": {
+                "username": "Username must have 6 length.",
+                "password": "Password must have 6 length."
+            },
+            "confirmPassword": "Confirm Password is not match your password."
+        }
+    },
+    "skill": {
+        "effecient": {
+            "INTELLIGENCE_SINGLE": "INTELLIGENCE_SINGLE",
+            "INTELLIGENCE_MULTIPLE": "INTELLIGENCE_MULTIPLE",
+            "FORCE_SINGLE": "FORCE_SINGLE",
+            "FORCE_MULTIPLE": "FORCE_MULTIPLE",
+            "BUFF": "BUFF",
+            "DEBUFF": "DEBUFF",
+            "PROTECTION": "PROTECTION",
+            "HEAL": "HEAL",
+            "CONTROL": "CONTROL",
+            "HOME": "HOME"
+        },
+        "status": {
+            "UNKNOWN": "UNKNOWN",
+            "UNOWNED": "UNOWNED",
+            "OWNED": "OWNED",
+            "RESEARCHABLE": "RESEARCHABLE",
+            "EXCHANGABLE": "EXCHANGABLE"
+        },
+        "category": {
+            "COMMAND": "COMMAND",
+            "PASSIVE": "PASSIVE",
+            "ACTIVE": "ACTIVE",
+            "COMBO": "COMBO",
+            "HOME": "HOME",
+            "ARRAY": "ARRAY",
+            "WAR": "WAR"
+        },
+        "adjustment": {
+            "INFANTRY": "INFANTRY",
+            "ARCHER": "ARCHER",
+            "PIKEMAN": "PIKEMAN",
+            "CAVALRY": "CAVALRY"
+        }
+    }
+    
+}
