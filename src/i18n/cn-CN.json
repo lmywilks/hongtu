@@ -34,6 +34,24 @@
             "confirmPassword": "两次输入密码不一致"
         }
     },
+    "home": {
+        "welcome": "欢迎",
+        "heros": "武将资料",
+        "skills": "技能大全",
+        "myhero": "我的武将",
+        "myskill": "我的技能"
+    },
+    "hero": {
+        "header": {
+            "name": "名字",
+            "force": "武力",
+            "defend": "防御",
+            "intelligence": "智力",
+            "speed": "攻速",
+            "politics": "政治",
+            "charm": "魅力"
+        }
+    },
     "skill": {
         "effecient": {
             "INTELLIGENCE_SINGLE": "智力单体",
@@ -69,6 +87,8 @@
             "PIKEMAN": "枪兵",
             "CAVALRY": "骑兵"
         }
+    },
+    "common": {
+        "search": "搜索"
     }
-    
 }

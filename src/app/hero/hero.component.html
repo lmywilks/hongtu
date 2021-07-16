@@ -1,19 +1,19 @@
 <form>
     <div class="form-group form-inline">
-        Search: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="heroService.searchTerm"/>
+        {{ 'common.search' | translate }}: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="heroService.searchTerm"/>
         <span class="ml-3" *ngIf="heroService.loading$ | async">Loading...</span>
     </div>
   
     <table class="table table-striped">
       <thead>
       <tr>      
-        <th scope="col">名字</th>
-        <th scope="col" sortable="force" (sort)="onSort($event)">武力</th>
-        <th scope="col" sortable="defend" (sort)="onSort($event)">防御</th>
-        <th scope="col" sortable="intelligence" (sort)="onSort($event)">智力</th>
-        <th scope="col" sortable="speed" (sort)="onSort($event)">攻速</th>
-        <th scope="col" sortable="politics" (sort)="onSort($event)">政治</th>
-        <th scope="col" sortable="charm" (sort)="onSort($event)">魅力</th>      
+        <th scope="col">{{ 'hero.header.name' | translate }}</th>
+        <th scope="col" sortable="force" (sort)="onSort($event)">{{ 'hero.header.force' | translate }}</th>
+        <th scope="col" sortable="defend" (sort)="onSort($event)">{{ 'hero.header.defend' | translate }}</th>
+        <th scope="col" sortable="intelligence" (sort)="onSort($event)">{{ 'hero.header.intelligence' | translate }}</th>
+        <th scope="col" sortable="speed" (sort)="onSort($event)">{{ 'hero.header.speed' | translate }}</th>
+        <th scope="col" sortable="politics" (sort)="onSort($event)">{{ 'hero.header.politics' | translate }}</th>
+        <th scope="col" sortable="charm" (sort)="onSort($event)">{{ 'hero.header.charm' | translate }}</th>      
       </tr>
       </thead>
       <tbody>

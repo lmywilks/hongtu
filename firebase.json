@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/hongtu",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

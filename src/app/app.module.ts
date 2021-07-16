@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { SortPipe } from './core/pipes/sort.pipe';
 import { SharedModule } from './shared/shared.module';
 import { I18nService } from './core/services/i18n.service';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { effects, reducers } from './store/app.state';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { I18nService } from './core/services/i18n.service';
     AppRoutingModule,
     SharedModule,
     HttpClientModule,
-    TranslateModule.forRoot()
+    TranslateModule.forRoot(),
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot(effects)
   ],
   providers: [
     {

@@ -74,6 +74,8 @@ export class HeroService {
     return of(Heros);
   }
 
+  Fetch(userId: string) {}
+
   Retrieve(id: string) {
     return of(Heros.filter(hero => hero.id === id)[0]);
   }

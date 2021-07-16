@@ -8,13 +8,16 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SortableDirective } from '../core/directives/sortable.directive';
+import { TranslateModule } from '@ngx-translate/core';
+import { MyHeroComponent } from './my-hero/my-hero.component';
 
 
 @NgModule({
   declarations: [
     HeroComponent,
     HeroDetailComponent,
-    SortableDirective
+    SortableDirective,
+    MyHeroComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +25,8 @@ import { SortableDirective } from '../core/directives/sortable.directive';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    TranslateModule
   ]
 })
 export class HeroModule { }

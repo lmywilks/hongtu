@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_ROOT: '',
+  API_ROOT: 'http://localhost:3000/api',
   defaultLanguage: 'cn-CN',
   supportLanguage: ['cn-CN', 'en-US']
 };

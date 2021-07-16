@@ -10,7 +10,14 @@
       <button class="py-2 d-none d-md-inline-block" (click)="switch_language()">
         {{ language === 'cn' ? 'English' : '简体中文' }}
       </button>
-      <button class="py-2 d-none d-md-inline-block" (click)="open_login()">{{ 'header.login' | translate }}</button>
+      <button class="py-2 d-none d-md-inline-block"
+              (click)="open_login()"
+              *ngIf="!(isLogin | async)"
+      >{{ 'header.login' | translate }}</button>
+      <button class="py-2 d-none d-md-inline-block"
+              (click)="logout()"
+              *ngIf="isLogin | async"
+      ></button>
     </div>
 </nav>
 <nav class="site-header sticky-top py-1 d-block d-md-none">

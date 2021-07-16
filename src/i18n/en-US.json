@@ -34,6 +34,24 @@
             "confirmPassword": "Confirm Password is not match your password."
         }
     },
+    "home": {
+        "welcome": "Welcome",        
+        "heros": "All Heros",
+        "skills": "All Skills",
+        "myhero": "My Heros",
+        "myskill": "My Skills"
+    },
+    "hero": {
+        "header": {
+            "name": "Name",
+            "force": "Force",
+            "defend": "Defend",
+            "intelligence": "Intelligence",
+            "speed": "Speed",
+            "politics": "Politics",
+            "charm": "Charm"
+        }
+    },
     "skill": {
         "effecient": {
             "INTELLIGENCE_SINGLE": "INTELLIGENCE_SINGLE",
@@ -69,6 +87,8 @@
             "PIKEMAN": "PIKEMAN",
             "CAVALRY": "CAVALRY"
         }
-    }
-    
+    },
+    "common": {
+        "search": "Search"
+    }    
 }

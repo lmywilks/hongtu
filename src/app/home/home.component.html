@@ -1,1 +1,25 @@
-<div>home</div>
+<div class="home">
+    <div class="welcome" *ngIf="isLogin$ | async">
+        <h3>{{ 'home.welcome' | translate }}, {{ username$ | async }}</h3>
+    </div>
+    <div class="container row">
+        <div class="list-item col-lg-3 col-md-6 d-flex">
+            <a class="text-primary m-auto" [routerLink]="['/heros']">{{ 'home.heros' | translate }}</a>
+        </div>
+        <div class="list-item col-lg-3 col-md-6 d-flex">
+            <a class="text-primary m-auto" [routerLink]="['/skills']">{{ 'home.skills' | translate }}</a>
+        </div>
+        <div class="list-item col-lg-3 col-xs-6 d-flex">
+            <button type="button" class="btn btn-link m-auto" (click)="myHero()">{{ 'home.myhero' | translate }}</button>
+        </div>
+        <div class="list-item col-lg-3 col-xs-6 d-flex">
+            <button type="button" class="btn btn-link m-auto" (click)="mySkill()">{{ 'home.myskill' | translate }}</button>
+        </div>
+    </div>
+    <ul class="list-group list-group-horizontal d-flex row col-12">
+        <li class="list-group-item col-lg-3 col-sm-6">An item</li>
+        <li class="list-group-item col-lg-3 col-sm-6">A second item</li>
+        <li class="list-group-item col-lg-3 col-sm-6">A third item</li>
+        <li class="list-group-item col-lg-3 col-sm-6">A Forth item</li>
+    </ul>
+</div>
