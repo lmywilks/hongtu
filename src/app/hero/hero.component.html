@@ -2,12 +2,17 @@
     <div class="form-group form-inline">
         {{ 'common.search' | translate }}: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="heroService.searchTerm"/>
         <span class="ml-3" *ngIf="heroService.loading$ | async">Loading...</span>
+
+        <div class="filter ml-auto">
+            <button type="button" class="btn btn-primary" (click)="switchLv()">{{ isFull ? 'LV 1' : 'LV 50' }}</button>
+        </div>
     </div>
   
     <table class="table table-striped">
       <thead>
       <tr>      
         <th scope="col">{{ 'hero.header.name' | translate }}</th>
+        <th scope="col">{{ 'hero.header.quality' | translate }}</th>
         <th scope="col" sortable="force" (sort)="onSort($event)">{{ 'hero.header.force' | translate }}</th>
         <th scope="col" sortable="defend" (sort)="onSort($event)">{{ 'hero.header.defend' | translate }}</th>
         <th scope="col" sortable="intelligence" (sort)="onSort($event)">{{ 'hero.header.intelligence' | translate }}</th>
@@ -23,28 +28,31 @@
             <a [routerLink]="[hero.id]">{{ hero.name }}</a>
         </td>
         <td>
-            <ngb-highlight [result]="hero.attribute.force" [term]="heroService.searchTerm"></ngb-highlight>
-             + <span class="color-green">{{ hero.growth.force }}</span>
+            <span [ngClass]="{'quality-s': hero.quality !== HERO_QUALITY.A, 'quality-a': hero.quality === HERO_QUALITY.A}">{{ hero.quality | translate }}</span>
         </td>
         <td>
-            <ngb-highlight [result]="hero.attribute.defend" [term]="heroService.searchTerm"></ngb-highlight>
-             + <span class="color-green">{{ hero.growth.defend }}</span>
+            <ngb-highlight [term]="heroService.searchTerm"></ngb-highlight>
+             <span>{{ calcAttribute(hero.attribute.force, hero.growth.force) }}</span> + <span class="color-green">{{ hero.growth.force }}</span>
         </td>
         <td>
-            <ngb-highlight [result]="hero.attribute.intelligence" [term]="heroService.searchTerm"></ngb-highlight>
-             + <span class="color-green">{{ hero.growth.intelligence }}</span>
+            <ngb-highlight [term]="heroService.searchTerm"></ngb-highlight>
+             <span>{{ calcAttribute(hero.attribute.defend, hero.growth.defend) }}</span> + <span class="color-green">{{ hero.growth.defend }}</span>
         </td>
         <td>
-            <ngb-highlight [result]="hero.attribute.speed" [term]="heroService.searchTerm"></ngb-highlight>
-             + <span class="color-green">{{ hero.growth.speed }}</span>
+            <ngb-highlight [term]="heroService.searchTerm"></ngb-highlight>
+             <span>{{ calcAttribute(hero.attribute.intelligence, hero.growth.intelligence) }}</span> + <span class="color-green">{{ hero.growth.intelligence }}</span>
         </td>
         <td>
-            <ngb-highlight [result]="hero.attribute.politics" [term]="heroService.searchTerm"></ngb-highlight>
-             + <span class="color-green">{{ hero.growth.politics }}</span>
+            <ngb-highlight [term]="heroService.searchTerm"></ngb-highlight>
+             <span>{{ calcAttribute(hero.attribute.speed, hero.growth.speed) }}</span> + <span class="color-green">{{ hero.growth.speed }}</span>
         </td>
         <td>
-            <ngb-highlight [result]="hero.attribute.charm" [term]="heroService.searchTerm"></ngb-highlight>
-             + <span class="color-green">{{ hero.growth.charm }}</span>
+            <ngb-highlight [term]="heroService.searchTerm"></ngb-highlight>
+             <span>{{ calcAttribute(hero.attribute.politics, hero.growth.politics) }}</span> + <span class="color-green">{{ hero.growth.politics }}</span>
+        </td>
+        <td>
+            <ngb-highlight [term]="heroService.searchTerm"></ngb-highlight>
+             <span>{{ calcAttribute(hero.attribute.charm, hero.growth.charm) }}</span> + <span class="color-green">{{ hero.growth.charm }}</span>
         </td>
       </tr>
       </tbody>

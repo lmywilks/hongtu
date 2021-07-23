@@ -44,6 +44,7 @@
     "hero": {
         "header": {
             "name": "名字",
+            "quality": "品质",
             "force": "武力",
             "defend": "防御",
             "intelligence": "智力",
@@ -53,42 +54,85 @@
         }
     },
     "skill": {
-        "effecient": {
-            "INTELLIGENCE_SINGLE": "智力单体",
-            "INTELLIGENCE_MULTIPLE": "智力群体",
-            "FORCE_SINGLE": "武力单体",
-            "FORCE_MULTIPLE": "武力群体",
-            "BUFF": "增益",
-            "DEBUFF": "减益",
-            "PROTECTION": "援护",
-            "HEAL": "治疗",
-            "CONTROL": "控制",
-            "HOME": "内政"
-        },
-        "status": {
-            "UNKNOWN": "自带",
-            "UNOWNED": "未拥有",
-            "OWNED": "已拥有",
-            "RESEARCHABLE": "可研究",
-            "EXCHANGABLE": "可兑换"
-        },
-        "category": {
-            "COMMAND": "指挥",
-            "PASSIVE": "被动",
-            "ACTIVE": "主动",
-            "COMBO": "连击",
-            "HOME": "内政",
-            "ARRAY": "阵法",
-            "WAR": "兵法"
-        },
-        "adjustment": {
-            "INFANTRY": "步兵",
-            "ARCHER": "弓兵",
-            "PIKEMAN": "枪兵",
-            "CAVALRY": "骑兵"
-        }
+        
     },
     "common": {
         "search": "搜索"
+    },
+    "type": {
+        "skill": {
+            "effecient": {
+                "INTELLIGENCE_SINGLE": "智力单体",
+                "INTELLIGENCE_MULTIPLE": "智力群体",
+                "FORCE_SINGLE": "武力单体",
+                "FORCE_MULTIPLE": "武力群体",
+                "BUFF": "增益",
+                "DEBUFF": "减益",
+                "PROTECTION": "援护",
+                "HEAL": "治疗",
+                "CONTROL": "控制",
+                "HOME": "内政"
+            },
+            "status": {
+                "UNKNOWN": "自带",
+                "UNOWNED": "未拥有",
+                "OWNED": "已拥有",
+                "RESEARCHABLE": "可研究",
+                "EXCHANGABLE": "可兑换"
+            },
+            "category": {
+                "MAIN": "主将技",
+                "COMMAND": "指挥",
+                "PASSIVE": "被动",
+                "ACTIVE": "主动",
+                "COMBO": "连击",
+                "HOME": "内政",
+                "ARRAY": "阵法",
+                "WAR": "兵法"
+            },
+            "adjustment": {
+                "INFANTRY": "步兵",
+                "ARCHER": "弓兵",
+                "PIKEMAN": "枪兵",
+                "CAVALRY": "骑兵"
+            }
+        },
+        "hero": {
+            "type": {
+                "force": "武",
+                "intelligence": "智",
+                "both": "兼",
+                "speed": "迅",
+                "assistent": "辅",
+                "heal": "医",
+                "defend": "盾",
+                "control": "控"
+            },
+            "quality": {
+                "b": "B",
+                "a": "A",
+                "s": "S",
+                "sp": "SP",
+                "xp": "XP"
+            },
+            "country": {
+                "shu": "蜀",
+                "wei": "魏",
+                "wu": "吴",
+                "qun": "群"
+            },
+            "season": {
+                "s1": "S1",
+                "s2": "S2",
+                "s3": "S3",
+                "s4": "S4",
+                "s5": "S5",
+                "s6": "S6",
+                "s7": "S7",
+                "s8": "S8",
+                "s9": "S9",
+                "s10": "S10"
+            }
+        }
     }
 }

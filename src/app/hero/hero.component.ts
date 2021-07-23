@@ -2,7 +2,7 @@ import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SortableDirective } from '../core/directives/sortable.directive';
 import { HeroService } from '../core/services/hero.service';
-import { HERO } from '../models/hero.model';
+import { HERO, HERO_QUALITY } from '../models/hero.model';
 import { SortEvent } from '../models/table.model';
 
 @Component({
@@ -13,8 +13,11 @@ import { SortEvent } from '../models/table.model';
 })
 export class HeroComponent {
 
+  HERO_QUALITY = HERO_QUALITY;
   heros$: Observable<HERO[]>;
   total$: Observable<number>;
+
+  isFull: boolean = false;
 
   @ViewChildren(SortableDirective) headers: QueryList<SortableDirective>;
 
@@ -34,6 +37,16 @@ export class HeroComponent {
 
     this.heroService.sortColumn = column;
     this.heroService.sortDirection = direction;
+  }
+
+  switchLv() {
+    this.isFull = !this.isFull;
+  }
+
+  calcAttribute(attr: string, growth: string) {
+    if (this.isFull) return (Number(attr) + Number(growth) * 50).toFixed(1);
+
+    return attr;
   }
 
 }

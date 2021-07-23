@@ -14,11 +14,18 @@ export const matches = (type: string, value: any, term: string) => {
     }
 }
 
-export const sort = (type: string, value: any[], column: SortColumn, direction: string) => {
+export const sort = (type: string, value: any[], column: SortColumn, direction: string, isFull?: boolean) => {
     if (type === '' || direction === '' || column === '') {
       return value;
     } else {
       if (type === 'hero') {
+        if (isFull) {
+            return [...value].sort((a, b) => {
+                const res = compare(Number(a.attribute[column])+Number(a.growth[column])*50, Number(b.attribute[column])+Number(b.growth[column])*50);
+                return direction === 'asc' ? res : -res;
+            });
+        }
+
         return [...value].sort((a, b) => {
           const res = compare(Number(a.attribute[column]), Number(b.attribute[column]));
           return direction === 'asc' ? res : -res;

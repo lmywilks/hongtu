@@ -44,6 +44,7 @@
     "hero": {
         "header": {
             "name": "Name",
+            "quality": "Quality",
             "force": "Force",
             "defend": "Defend",
             "intelligence": "Intelligence",
@@ -53,42 +54,85 @@
         }
     },
     "skill": {
-        "effecient": {
-            "INTELLIGENCE_SINGLE": "INTELLIGENCE_SINGLE",
-            "INTELLIGENCE_MULTIPLE": "INTELLIGENCE_MULTIPLE",
-            "FORCE_SINGLE": "FORCE_SINGLE",
-            "FORCE_MULTIPLE": "FORCE_MULTIPLE",
-            "BUFF": "BUFF",
-            "DEBUFF": "DEBUFF",
-            "PROTECTION": "PROTECTION",
-            "HEAL": "HEAL",
-            "CONTROL": "CONTROL",
-            "HOME": "HOME"
-        },
-        "status": {
-            "UNKNOWN": "UNKNOWN",
-            "UNOWNED": "UNOWNED",
-            "OWNED": "OWNED",
-            "RESEARCHABLE": "RESEARCHABLE",
-            "EXCHANGABLE": "EXCHANGABLE"
-        },
-        "category": {
-            "COMMAND": "COMMAND",
-            "PASSIVE": "PASSIVE",
-            "ACTIVE": "ACTIVE",
-            "COMBO": "COMBO",
-            "HOME": "HOME",
-            "ARRAY": "ARRAY",
-            "WAR": "WAR"
-        },
-        "adjustment": {
-            "INFANTRY": "INFANTRY",
-            "ARCHER": "ARCHER",
-            "PIKEMAN": "PIKEMAN",
-            "CAVALRY": "CAVALRY"
-        }
+        
     },
     "common": {
         "search": "Search"
-    }    
+    },
+    "type": {
+        "skill": {
+            "effecient": {
+                "INTELLIGENCE_SINGLE": "INTELLIGENCE_SINGLE",
+                "INTELLIGENCE_MULTIPLE": "INTELLIGENCE_MULTIPLE",
+                "FORCE_SINGLE": "FORCE_SINGLE",
+                "FORCE_MULTIPLE": "FORCE_MULTIPLE",
+                "BUFF": "BUFF",
+                "DEBUFF": "DEBUFF",
+                "PROTECTION": "PROTECTION",
+                "HEAL": "HEAL",
+                "CONTROL": "CONTROL",
+                "HOME": "HOME"
+            },
+            "status": {
+                "UNKNOWN": "UNKNOWN",
+                "UNOWNED": "UNOWNED",
+                "OWNED": "OWNED",
+                "RESEARCHABLE": "RESEARCHABLE",
+                "EXCHANGABLE": "EXCHANGABLE"
+            },
+            "category": {
+                "MAIN": "MAIN",
+                "COMMAND": "COMMAND",
+                "PASSIVE": "PASSIVE",
+                "ACTIVE": "ACTIVE",
+                "COMBO": "COMBO",
+                "HOME": "HOME",
+                "ARRAY": "ARRAY",
+                "WAR": "WAR"
+            },
+            "adjustment": {
+                "INFANTRY": "INFANTRY",
+                "ARCHER": "ARCHER",
+                "PIKEMAN": "PIKEMAN",
+                "CAVALRY": "CAVALRY"
+            }
+        },
+        "hero": {
+            "type": {
+                "force": "Force",
+                "intelligence": "Intelligence",
+                "both": "Both",
+                "speed": "Speed",
+                "assistent": "Assistent",
+                "heal": "Heal",
+                "defend": "Defend",
+                "control": "Control"
+            },
+            "quality": {
+                "b": "B",
+                "a": "A",
+                "s": "S",
+                "sp": "SP",
+                "xp": "XP"
+            },
+            "country": {
+                "shu": "Shu",
+                "wei": "Wei",
+                "wu": "Wu",
+                "qun": "Qun"
+            },
+            "season": {
+                "s1": "S1",
+                "s2": "S2",
+                "s3": "S3",
+                "s4": "S4",
+                "s5": "S5",
+                "s6": "S6",
+                "s7": "S7",
+                "s8": "S8",
+                "s9": "S9",
+                "s10": "S10"
+            }
+        } 
+    }
 }
